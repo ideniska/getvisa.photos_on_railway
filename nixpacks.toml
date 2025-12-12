@@ -2,4 +2,4 @@
 PYTHON_VERSION = "3.10"
 
 [phases.setup]
-nixPkgs = ["python310"]
+nixPkgs = ["python310", "postgresql"]
