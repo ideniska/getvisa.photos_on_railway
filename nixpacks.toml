@@ -3,3 +3,7 @@ PYTHON_VERSION = "3.10"
 
 [phases.setup]
 nixPkgs = ["python310", "postgresql"]
+
+[phases.install]
+# Ensure README.md exists so Poetry can build package metadata during pip install
+cmds = ["if [ ! -f README.md ]; then echo 'Placeholder README for packaging' > README.md; fi"]
