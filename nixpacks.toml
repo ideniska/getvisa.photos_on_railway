@@ -8,5 +8,5 @@ nixPkgs = ["python310", "postgresql"]
 # Ensure README.md exists so Poetry can build package metadata during pip install
 cmds = [
   "if [ ! -f README.md ]; then echo 'Placeholder README for packaging' > README.md; fi",
-  "pip install --no-cache-dir -r requirements.txt"
+  "python -m pip install --no-cache-dir -r requirements.txt"
 ]
